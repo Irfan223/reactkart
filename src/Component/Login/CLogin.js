@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './CLogin.css';
 const axios = require('axios');
+const qs = require('qs');
+const form = new FormData();
 export default class CLogin extends Component {
 
     constructor(props) {
@@ -9,40 +11,31 @@ export default class CLogin extends Component {
             userEmail: '',
             userPassword: ''
         };
-        this.handleChange = this.handleChange.bind(this);
-        this.login = this.login.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
+        // this.login = this.login.bind(this);
     }
-    
-    handleChange (event) {      
-        this.setState({[event.target.name]: event.target.value});
-           this.setState({[event.target.name]: event.target.value});
-      }
-   
-    login(event) {
+
+    handleChange = event => {
+        this.setState({ [event.target.name]: event.target.value });
+        this.setState({ [event.target.name]: event.target.value });
+    }
+
+    login = event => {
         // alert('A name was submitted: ' + this.state.value);
-        console.log(this.state.userEmail);
-        console.log(this.state.userPassword);
-        // event.preventDefault();
-        const config = {
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded'
-            }
-            const requestBody = {
-                Cemail: this.state.userEmail,
-            Cpassword: this.state.userPassword
-              }
-        axios.post('http://localhost:4000/api/CusLogin', requestBody, config)
-            .then(function (response) {
-                console.log(response);
-            })
+        event.preventDefault();
+        const email = this.state.userEmail;
+        const password = this.state.userPassword;
+        axios.post('http://localhost:4000/api/CusLogin?email='+email+'&password='+password)
+        .then(function (response) {
+            console.log(response);
+        })
             .catch(function (error) {
                 console.log(error);
             });
-            event.preventDefault();
     }
 
-    componentDidMount() {
-    }
+    // componentDidMount() {
+    // }
 
     render() {
         return (

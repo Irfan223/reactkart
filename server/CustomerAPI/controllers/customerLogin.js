@@ -10,12 +10,13 @@ module.exports.CustomerLogin = function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.header('Access-Control-Allow-Credentials', true);
-    console.log(req.query.Cemail);
-    var sql = "SELECT * from CustomerLogin";
-    connection.query(sql, function (err, result) {
+    var email = req.query.email;
+    var password = req.query.password;
+    var sql = "SELECT * from CustomerLogin WHERE CustomerEmail =? AND CustomerPassword =?";
+    connection.query(sql, [email,password], function (err, result) {
         if (err) throw err;
-        // console.log(result);
-        // res.send(result);
+        // console.log(JSON.stringify(result[0].customerId));
+        // res.send(rows);
     });
 
 }
