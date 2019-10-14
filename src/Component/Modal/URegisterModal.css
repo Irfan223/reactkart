@@ -1,0 +1,27 @@
+.crossButton{
+    float: right;
+    border: none;
+    margin-top: -10px;
+    cursor: pointer;
+    background-color: white;
+}
+.fa-fa-times-thin{
+color: black;
+}
+.fa-times-thin:before {
+	content: '\00d7';
+}
+.crossButton:focus{
+    outline: none;
+}
+.signup{
+    margin-top: -35px;
+    float: right;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: rgb(74, 170, 230);
+}
+.newuser{
+    margin-top: 10px;
+}

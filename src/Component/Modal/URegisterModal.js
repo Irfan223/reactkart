@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import './ModalLogin.css';
-import CLogin from '../Login/CLogin';
+import './URegisterModal.css';
 import CRegister from '../Register/CRegister';
 
 const customStyles = {
@@ -18,7 +17,7 @@ const customStyles = {
 
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 
-export default class ModalLogin extends Component {
+export default class URegisterModal extends Component {
   constructor() {
     super();
 
@@ -45,9 +44,11 @@ export default class ModalLogin extends Component {
   openModal() {
     this.setState({ modalIsOpen: true });
   }
-  randomFunction() {
-    this.props.closeModal()
-}
+
+  // afterOpenModal() {
+  //   // references are now sync'd and can be accessed.
+  //   this.subtitle.style.color = '#f00';
+  // }
 
   closeModal() {
     this.setState({ modalIsOpen: false });
@@ -56,7 +57,7 @@ export default class ModalLogin extends Component {
   render() {
     return (
       <div>
-        <button className="closeButton" onClick={this.openModal}>Login</button>
+          <p className="newuser">New Here?</p> <button className="signup" onClick={this.openModal}>Sign Up</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           // onAfterOpen={this.afterOpenModal}
@@ -67,7 +68,7 @@ export default class ModalLogin extends Component {
         >
           {/* <h2 ref={subtitle => this.subtitle = subtitle}>Login</h2> */}
           <button className="crossButton" onClick={this.closeModal}><i className="fa fa-times-thin fa-2x" aria-hidden="true"></i> </button>
-          <CLogin />
+          <CRegister />
         </Modal>
       </div>
     );

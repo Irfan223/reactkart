@@ -34,13 +34,16 @@
 textarea:focus, input:focus{
     outline: none;
 }
-.loginButton{
+.registerButton{
     width: 100%;
     border: none;
     height: 35px;
     cursor: pointer;
     background-color: rgb(74, 170, 230);
 }
-.loginButton:focus{
+.registerButton:focus{
     outline: none;
+}
+.Login{
+    margin-top: 10px;
 }

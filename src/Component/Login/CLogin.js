@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './CLogin.css';
+// import register from '../Register/CRegister';
+// import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import URegister from '../Modal/URegisterModal';
 const axios = require('axios');
-const qs = require('qs');
-const form = new FormData();
 export default class CLogin extends Component {
 
     constructor(props) {
@@ -50,10 +51,11 @@ export default class CLogin extends Component {
                 <hr />
                 <div className="or">Or</div><br />
                 <form onSubmit={this.login}>
-                    <input className="input" type="text" name="userEmail" value={this.state.userEmail} onChange={this.handleChange} placeholder="Please Enter Email/Phone" required /><br /><br />
-                    <input className="input" type="password" name="userPassword" value={this.state.userPassword} onChange={this.handleChange} placeholder="Please Enter Password" required />
+                    <input className="inputText" type="text" name="userEmail" value={this.state.userEmail} onChange={this.handleChange} placeholder="Please Enter Email/Phone" required /><br /><br />
+                    <input className="inputText" type="password" name="userPassword" value={this.state.userPassword} onChange={this.handleChange} placeholder="Please Enter Password" required />
                     <br /><br /><input type="submit" className="loginButton" value="Login" />
                 </form>
+             <URegister />
             </div>
         );
     }
