@@ -2,13 +2,15 @@ var express = require('express');
 var MongoClient = require('mongodb').MongoClient;
 var app = express();
 var cors = require('cors');
+var cookieParser = require('cookie-parser');
 app.use(cors());
 var routes = require('./CustomerAPI/routes/index.js');
 app.use('/api', routes);
 var port = process.env.PORT || 4000;
-bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true })
 .then(client => {
   const db = client.db('printing');
