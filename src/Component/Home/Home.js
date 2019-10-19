@@ -30,13 +30,14 @@ class Home extends Component {
                 <div className="App">
                     <Header />
                     <section>
-                    <div className="content">
-                        {items.map(item => (
-                            <span key={item.id}>
-                                <p>Title: {item.title}</p>
-                            </span>
-                        ))}
-                    </div>
+                        <div className="content">
+                            
+                            {items.map(item => (
+                                <span key={item.id}>
+                                    <p>Title: {item.title}</p>
+                                </span>
+                            ))}
+                        </div>
                     </section>
                 </div>
             );

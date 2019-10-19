@@ -18,11 +18,11 @@ module.exports.CustomerLogin = function (req, res) {
         if (err) throw err;
         const domain = 'localhost';
         // const parsed = JSON.parse(body);
-        console.log(JSON.stringify(result[0]))
-        const customerId = JSON.stringify(result[0].customerId);
-        const CustomerName = JSON.stringify(result[0].CustomerName);
-        const CustomerEmail = JSON.stringify(result[0].CustomerEmail);
-        const CustomerMobile = JSON.stringify(result[0].CustomerMobile);
+        // console.log(JSON.stringify(result[0]))
+        // const customerId = JSON.stringify(result[0].customerId);
+        // const CustomerName = JSON.stringify(result[0].CustomerName);
+        // const CustomerEmail = JSON.stringify(result[0].CustomerEmail);
+        // const CustomerMobile = JSON.stringify(result[0].CustomerMobile);
         res.cookie('customerId',customerId, '/');
         res.cookie('CustomerName',CustomerName, '/');
         res.cookie('CustomerEmail',CustomerEmail, '/');
