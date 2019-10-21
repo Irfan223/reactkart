@@ -1,23 +1,29 @@
 
 import React, { Component } from 'react';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css';
 import ModalLogin from '../Modal/ModalLogin';
-export default class Header extends Component {
-
-
-    render() {
-        return (
-            <div className="App">
-                <div className="topnav">
-                    <a className="active" href="#">MYWEBSITE</a>
-                    <a href="MEN">MEN</a>
-                    <a href="WOMEN">WOMEN</a>
-                    <a href="MOBILE">MOBILE COVERS</a>
-                    <input type="text" placeholder="Search by Product, Category or Collection "></input>
-                    <ModalLogin />
-                    <div className="cart"><i className="fa fa-shopping-cart fa_custom fa-2x"></i></div>
-                </div>
+function Header() {
+    return (
+        <div>
+            <div className="toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
-        )
-    }
+            <nav>
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Mobile Covers</a></li>
+                    <li><a href="#">Clearance</a></li>
+                    <a id="searchbar"><input type="text" placeholder="Search Here" /></a>
+                    <a id="login" href="#"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+
+                </ul>
+            </nav>
+
+
+        </div>
+    )
 }
+
+export default Header;

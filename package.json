@@ -8,6 +8,7 @@
     "cookie-parse": "^0.4.0",
     "cors": "^2.8.5",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-modal": "^3.10.1",

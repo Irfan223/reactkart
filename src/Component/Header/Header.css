@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -77,4 +77,80 @@ body {
     .topnav input[type=text] {
       border: 1px solid #ccc;  
     }
+  } */
+  *body
+  {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+  }
+  nav{
+    width: 100%;
+    background-color: purple;
+    text-align: left;
+  }
+  ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+
+  }
+  ul li{
+    list-style: none;
+    display: inline-block;
+    padding:20px;
+  }
+  ul li:hover{
+    background: greenyellow;
+  }
+  
+  ul li a{
+    color: black;  
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  #login 
+  {
+    float: right;
+    padding: 20px;
+    font-size:20px;
+  }
+  a[type="text"]
+  {
+    box-sizing: 50px;
+  }
+  #searchbar
+  {
+    margin-left: 300px;
+    font-size:10px;
+  }
+
+  .toggle
+  {
+    width: 100%;
+    padding: 10px 20px;
+    background: blue;
+    text-align: right;
+    box-sizing: border-box;
+    color: white;
+    font-size: 30px;
+    display: none;
+  }
+
+  @media(max-width:768px)
+  {
+        .toggle
+        {
+          display: block;
+        }
+        ul
+        {
+          width: 100%;
+        }
+        ul li
+        {
+          display: block;
+          text-align: right;
+        }
   }
