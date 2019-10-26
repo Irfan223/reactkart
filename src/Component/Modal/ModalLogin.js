@@ -24,7 +24,9 @@ export default class ModalLogin extends Component {
 
     this.state = {
       modalIsOpen: false,
-      value: ''
+      value: '',
+      loginOpened: false,
+      signupOpened: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -42,25 +44,40 @@ export default class ModalLogin extends Component {
     alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
   }
-  openModal() {
-    this.setState({ modalIsOpen: true });
-  }
-  randomFunction() {
-    this.props.closeModal()
-}
-
-  closeModal() {
-    this.setState({ modalIsOpen: false });
-  }
+  openModal = modalType => () => {
+    if (modalType === "login") {
+      this.setState({
+        loginOpened: true,
+        signupOpened: false
+      });
+    } else if (modalType === "signup") {
+      this.setState({
+        loginOpened: false,
+        signupOpened: true
+      });
+    }
+  };
+  closeModal = modalType => () => {
+    if (modalType === "login") {
+      this.setState({
+        loginOpened: false
+      });
+    } else if (modalType === "signup") {
+      this.setState({
+        signupOpened: false
+      });
+    }
+  };
 
   render() {
+    const { loginOpened, signupOpened } = this.state;
     return (
       <div>
         <button className="closeButton" onClick={this.openModal}>Login</button>
         <Modal
-          isOpen={this.state.modalIsOpen}
+          isOpen={loginOpened}
           // onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
+          onRequestClose={this.closeModal("login")}
           style={customStyles}
           appElement={document.getElementById('app')}
           contentLabel="Example Modal"

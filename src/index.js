@@ -8,6 +8,7 @@ import CLogin from './Component/Login/CLogin';
 import CRegister from './Component/Register/CRegister';
 import * as serviceWorker from './serviceWorker';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
 ReactDOM.render(<Home />, document.getElementById('root'));

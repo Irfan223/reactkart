@@ -12,8 +12,6 @@ export default class CLogin extends Component {
             userEmail: '',
             userPassword: ''
         };
-        // this.handleChange = this.handleChange.bind(this);
-        // this.login = this.login.bind(this);
     }
 
     handleChange = event => {
@@ -47,9 +45,9 @@ export default class CLogin extends Component {
                 <div className="socialLogin">
                     <button className="fb">Facebook</button>&nbsp;&nbsp;
               <button className="google">Google</button>
-                </div><br />
+                </div>
                 <hr />
-                <div className="or">Or</div><br />
+                <div className="or">Or</div>
                 <form onSubmit={this.login}>
                     <input className="inputText" type="text" name="userEmail" value={this.state.userEmail} onChange={this.handleChange} placeholder="Please Enter Email/Phone" required /><br /><br />
                     <input className="inputText" type="password" name="userPassword" value={this.state.userPassword} onChange={this.handleChange} placeholder="Please Enter Password" required />

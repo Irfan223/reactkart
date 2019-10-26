@@ -71,10 +71,65 @@ body {
       border: 1px solid #ccc;  
     }
   }
+  /* .sectionbody {
+  position:absolute;
+  top: 50px;
+  } */
+  .header {
+    height: 100px;
+  }
+  /* -----------------End-header-------------------- */
   .content{
-      /* margin-top: 50px; */
-      padding-top: 70px;
+    position:absolute;
+    top: 50px;
   }
   .fa {
     font-size:24px
   }
+  #image-fixed{
+    height: 570px;
+  }
+.carousel-caption {
+ z-index: inherit;
+}
+#offersection{
+  background-color: black;
+  color: white;
+}
+#offerText{
+margin-top: 10%;
+}
+
+#newArrival{
+  padding: 10px;
+}
+#imageborder{
+  padding: 10px;
+  margin-top: 5px;
+}
+.border{
+  border: 0.5px solid rgb(224, 219, 219);
+}
+.border1{
+  border: 0.5px solid rgb(224, 219, 219);
+  padding: 25px;
+  border-bottom: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: -20px;
+  margin-top: 15px;
+}
+/* ---------------------------End Body-------------------- */
+#footer{
+  background-color:rgb(44, 43, 43);
+  color: white;
+  margin-left: -119px;
+  margin-right: -119px;
+}
+.companyLogo{
+  color: yellowgreen;
+}
+.titlecontent{
+  font-size: 13px;
+  color: yellowgreen;
+}

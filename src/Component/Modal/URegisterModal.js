@@ -23,7 +23,9 @@ export default class URegisterModal extends Component {
 
     this.state = {
       modalIsOpen: false,
-      value: ''
+      value: '',
+      loginOpened: false,
+      signupOpened: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -41,27 +43,37 @@ export default class URegisterModal extends Component {
     alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
   }
-  openModal() {
-    this.setState({ modalIsOpen: true });
-  }
-
-  // afterOpenModal() {
-  //   // references are now sync'd and can be accessed.
-  //   this.subtitle.style.color = '#f00';
-  // }
-
-  closeModal() {
-    this.setState({ modalIsOpen: false });
-  }
-
+  openModal = modalType => () => {
+    if (modalType === "login") {
+      this.setState({
+        loginOpened: true,
+        signupOpened: false
+      });
+    } else if (modalType === "signup") {
+      this.setState({
+        loginOpened: false,
+        signupOpened: true
+      });
+    }
+  };
+  closeModal = modalType => () => {
+    if (modalType === "login") {
+      this.setState({
+        loginOpened: false
+      });
+    } else if (modalType === "signup") {
+      this.setState({
+        signupOpened: false
+      });
+    }
+  };
   render() {
+    const { loginOpened, signupOpened } = this.state;
     return (
-      <div>
+      <div className="modalBody">
           <p className="newuser">New Here?</p> <button className="signup" onClick={this.openModal}>Sign Up</button>
         <Modal
-          isOpen={this.state.modalIsOpen}
-          // onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
+         isOpen={signupOpened} onRequestClose={this.closeModal("signup")}
           style={customStyles}
           appElement={document.getElementById('app')}
           contentLabel="Example Modal"

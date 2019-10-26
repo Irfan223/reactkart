@@ -14,21 +14,9 @@ module.exports.CustomerLogin = function (req, res) {
     var email = req.query.email;
     var password = req.query.password;
     var sql = "SELECT * from CustomerLogin WHERE CustomerEmail =? AND CustomerPassword =?";
-    connection.query(sql, [email,password], function (err, result) {
+    connection.query(sql, [email, password], function (err, result) {
         if (err) throw err;
-        const domain = 'localhost';
-        // const parsed = JSON.parse(body);
-        console.log(JSON.stringify(result[0]))
-        const customerId = JSON.stringify(result[0].customerId);
-        const CustomerName = JSON.stringify(result[0].CustomerName);
-        const CustomerEmail = JSON.stringify(result[0].CustomerEmail);
-        const CustomerMobile = JSON.stringify(result[0].CustomerMobile);
-        // res.cookie('customerId',customerId, '/');
-        // res.cookie('CustomerName',CustomerName, '/');
-        // res.cookie('CustomerEmail',CustomerEmail, '/');
-        // res.cookie('CustomerMobile',CustomerMobile, '/');
-        // res.status(200).json({'status':'cookies set!'})
-
+        res.send({'name': irfan});
         // console.log(JSON.stringify(result[0].customerId));
         // res.send(rows);
     });

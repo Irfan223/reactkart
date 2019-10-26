@@ -53,14 +53,14 @@ export default class CRegister extends Component {
                 </div><br /> */}
                 {/* <hr /> */}
                 {/* <div className="or">Or</div><br /> */}
-                <form onSubmit={this.register}>
+                {/* <form onSubmit={this.register}>
                     <input className="inputText" type="text" name="userName" value={this.state.userName} onChange={this.handleChange} placeholder="Please Enter Your Name" required /><br /><br />
                     <input className="inputText" type="email" name="userEmail" value={this.state.userEmail} onChange={this.handleChange} placeholder="Please Enter Your Email" required /><br /><br />
                     <input className="inputText" type="number" name="userNumber" value={this.state.userNumber} onChange={this.handleChange} placeholder="Please Enter Your Phone" required /> <br /><br />
                     <input className="inputText" type="password" name="userPassword" value={this.state.userPassword} onChange={this.handleChange} placeholder="Please Enter Password" required /><br />
                     <br /><input type="submit" className="registerButton" value="Register" />
-                </form>
-                <div className="Login"><ModalLogin /></div>
+                </form> */}
+                <ModalLogin />
             </div>
         );
     }
