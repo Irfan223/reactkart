@@ -120,16 +120,3 @@ margin-top: 10%;
   margin-top: 15px;
 }
 /* ---------------------------End Body-------------------- */
-#footer{
-  background-color:rgb(44, 43, 43);
-  color: white;
-  margin-left: -119px;
-  margin-right: -119px;
-}
-.companyLogo{
-  color: yellowgreen;
-}
-.titlecontent{
-  font-size: 13px;
-  color: yellowgreen;
-}

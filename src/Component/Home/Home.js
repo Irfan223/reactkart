@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import Carousel from 'react-bootstrap/Carousel';
 class Home extends Component {
 
@@ -224,41 +225,7 @@ class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            {/* Start Footer */}
-                            <div className="container" >
-                                <div className="row" id="footer">
-                                    <div className="col-sm-3"><br /><br />
-                                       <div className="companyLogo">COMPANY LOGO</div>
-                                    </div>
-                                </div>
-                                <div className="row" id="footer">
-                                    <div className="col-sm-3"><br />
-                                        <div className="titlecontent">CUSTOMER SERVICE</div>
-                                            <div className="contentfooter">
-
-                                            </div>
-                                    </div>
-                                    <div className="col-sm-3"><br />
-                                        <div className="titlecontent">
-                                            <div className="contentfooter">COMPANY</div>
-
-                                            </div>
-                                    </div>
-                                    <div className="col-sm-3"><br />
-                                        <div className="titlecontent">CONNECT WITH US  </div>
-                                            <div className="contentfooter">
-
-                                            </div>
-                                    </div>
-                                    <div className="col-sm-3"><br />
-                                        <div className="titlecontent"> KEEP UP TO DATE </div>
-                                            <div className="contentfooter">
-
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End Footer */}
+                            <Footer />
                         </div><br />
                     </section>
                 </div>

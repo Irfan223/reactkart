@@ -5,7 +5,7 @@ import './ModalLoginRegister.css';
 const axios = require('axios');
 const customStyles = {
     content: {
-        top: '45%',
+        top: '50%',
         left: '50%',
         right: 'auto',
         bottom: 'auto',
