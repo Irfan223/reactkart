@@ -17,7 +17,7 @@ export default class Footer extends Component {
                     </div>
                     <div className="row" id="footer">
                         <div className="col-sm-2"><br />
-                            <div className="titlecontent">ABOUT</div><br />
+                            <div className="titlecontent"><strong>ABOUT</strong></div><br />
                             <div className="item">
                                 <div>Contact Us</div>
                                 <div>About Us</div>
@@ -25,7 +25,7 @@ export default class Footer extends Component {
                             </div>
                         </div>
                         <div className="col-sm-2"><br />
-                            <div className="titlecontent">HELP</div><br />
+                            <div className="titlecontent"><strong>HELP</strong></div><br />
                             <div className="item">
                                 <div>Payments</div>
                                 <div>Shipping</div>
@@ -33,7 +33,7 @@ export default class Footer extends Component {
                             </div>
                         </div>
                         <div className="col-sm-2"><br />
-                            <div className="titlecontent">POLICY</div><br />
+                            <div className="titlecontent"><strong>POLICY</strong></div><br />
                             <div className="item">
                                 <div>Return Policy</div>
                                 <div>Terms of Use</div>
@@ -43,7 +43,7 @@ export default class Footer extends Component {
                             </div>
                         </div>
                         <div className="col-sm-2"><br />
-                            <div className="titlecontent">SOCIAL</div><br />
+                            <div className="titlecontent"><strong>SOCIAL</strong></div><br />
                             <div className="item">
                                 <div>Facebook</div>
                                 <div>Twitter</div>
@@ -51,12 +51,12 @@ export default class Footer extends Component {
                             </div>
                         </div>
                         <div className="col-sm-4"><br />
-                            <div className="titlecontent">Registered Office Address</div><br />
+                            <div className="titlecontent"><strong>Registered Office Address</strong></div><br />
                             <div className="item">
                                 E-246/5, Second Floor, Shaheen Bagh, Jamia Nagar, Abul Fazal Enclave Part-2, Okhla New Delhi, 110025.
                                 New Delhi, India.
                             </div><br />
-                            <form class="form-inline" onSubmit={this.subsribe}>
+                            <form className="form-inline" onSubmit={this.subsribe}>
                                 <input type="email" className="inputtext" id="email"
                                     placeholder="Enter email Id" name="email" required />
                                 <button type="submit" className="subscribe">SUBSCRIBE</button>

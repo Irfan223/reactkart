@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './Header.css';
 import ModalLogin from '../Modal/ModalLogin';
 import ModalLoginRegister from '../LoginRegisterModal/ModalLoginRegister';
+import { Link } from 'react-router-dom';
 export default class Header extends Component {
 
 
@@ -39,16 +40,8 @@ export default class Header extends Component {
                         <a href="#" className="navbar-brand">Brand</a>
                         <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div className="navbar-nav">
-                                <a href="#" className="nav-item nav-link active">Home</a>
-                                <a href="#" className="nav-item nav-link">Profile</a>
-                                <div className="nav-item dropdown">
-                                    <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Messages</a>
-                                    <div className="dropdown-menu">
-                                        <a href="#" className="dropdown-item">Inbox</a>
-                                        <a href="#" className="dropdown-item">Sent</a>
-                                        <a href="#" className="dropdown-item">Drafts</a>
-                                    </div>
-                                </div>
+                            <Link className="nav-item nav-link" to="/explore/Men's">Men's</Link>
+                            <Link className="nav-item nav-link" to="/explore/Women's">Women's</Link>
                             </div>
                             <form className="form-inline">
                                 <div className="input-group">

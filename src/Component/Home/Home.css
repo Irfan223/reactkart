@@ -75,9 +75,9 @@ body {
   position:absolute;
   top: 50px;
   } */
-  .header {
+  /* .header {
     height: 100px;
-  }
+  } */
   /* -----------------End-header-------------------- */
   .content{
     position:absolute;
@@ -88,6 +88,9 @@ body {
   }
   #image-fixed{
     height: 570px;
+  }
+  .imagebody{
+    background-color: whitesmoke;
   }
 .carousel-caption {
  z-index: inherit;
@@ -101,11 +104,12 @@ margin-top: 10%;
 }
 
 #newArrival{
-  padding: 10px;
+  /* padding: 10px; */
+  margin-top: 5px;
 }
 #imageborder{
   padding: 10px;
-  margin-top: 5px;
+  margin-top: -10px;
 }
 .border{
   border: 0.5px solid rgb(224, 219, 219);

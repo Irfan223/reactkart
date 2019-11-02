@@ -3,6 +3,8 @@ import './Home.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Carousel from 'react-bootstrap/Carousel';
+import explore from '../ExploreCategories/ExploreCategories';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 class Home extends Component {
 
     constructor(props) {
@@ -132,29 +134,53 @@ class Home extends Component {
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-sm-4">
-                                            <div className="card">
-                                                <div className="card-body">
-                                                    <img src={require("../../assets/images/t-shirt.jpg")} width="300px" height="200px" /><br /><br />
+                                            <div className="imagebody">
+                                                <Link to="/explore/Men's-t-shirt">
+                                                    <img src={require("../../assets/images/t-shirt.jpg")} width="340px" height="200px" /></Link><br /><br />
+                                                <div className="container">
                                                     <h6 className="card-title"><strong>Latest Men's T-Shirt</strong></h6>
-                                                    <p className="card-text">Rs 200</p>
+                                                    <div className="row">
+                                                        <div className="col-sm-6">
+                                                            <p className="card-text">Rs 300</p>
+                                                        </div>
+                                                        <div className="col-sm-6">
+                                                            <p className="card-text"><strike>Rs 500</strike></p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-4">
-                                            <div className="card">
-                                                <div className="card-body">
-                                                    <img src={require("../../assets/images/mobile-cover.jpg")} width="300px" height="200px" /><br /><br />
+                                            <div className="imagebody">
+                                                <Link to="/explore/mobile-cover">
+                                                    <img src={require("../../assets/images/mobile-cover.jpg")} width="340px" height="200px" /></Link><br /><br />
+                                                <div className="container">
                                                     <h6 className="card-title"><strong>Mobile Covers</strong></h6>
-                                                    <p className="card-text">Rs 500</p>
+                                                    <div className="row">
+                                                        <div className="col-sm-6">
+                                                            <p className="card-text">Rs 300</p>
+                                                        </div>
+                                                        <div className="col-sm-6">
+                                                            <p className="card-text"><strike>Rs 500</strike></p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-4">
-                                            <div className="card">
-                                                <div className="card-body">
-                                                    <img src={require("../../assets/images/bags.jpg")} width="300px" height="200px" /><br /><br />
-                                                    <h6 className="card-title"><strong>Men Bags</strong></h6>
-                                                    <p className="card-text">Rs 350</p>
+                                            <div className="imagebody">
+                                                <Link to="/explore/bags">
+                                                    <img src={require("../../assets/images/bags.jpg")} width="340px" height="200px" /></Link><br /><br />
+                                                <div className="container">
+                                                    <h6 className="card-title"><strong>Bags</strong></h6>
+                                                    <div className="row">
+                                                        <div className="col-sm-6">
+                                                            <p className="card-text">Rs 300</p>
+                                                        </div>
+                                                        <div className="col-sm-6">
+                                                            <p className="card-text"><strike>Rs 500</strike></p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -183,38 +209,43 @@ class Home extends Component {
                                     <div className="container" >
                                         <div className="row">
                                             <div className="col-sm-6" id="newArrival">
-                                                <div className="border1">
+                                                <div className="imagebody">
+                                                    <div className="container">
                                                     <h4>COLLECTION OF 2019</h4>
                                                     <h3><strong>MEN’S SUMMER T-SHIRT</strong></h3>
+                                                    </div>
+                                               
+                                                <img id="newArrival" src={require("../../assets/images/t-shirt.jpg")} width="510px" height="425px" />
                                                 </div>
-                                                <img id="newArrival" src={require("../../assets/images/t-shirt.jpg")} width="500px" height="425px" />
                                             </div>
                                             <div className="col-sm-6" id="newArrival">
                                                 <div className="row">
                                                     <div className="col-sm-6" id="imageborder">
+                                                    <div className="imagebody">
                                                         <img src={require("../../assets/images/t-shirt.jpg")} width="255px" height="200px" />
-                                                        <div className="border">
+                                                            <div className="container">
+                                                            <div>Latest T-Shirt</div>
+                                                            <div>Rs 600</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-sm-6" id="imageborder">
+                                                    <div className="imagebody">
+                                                        <img src={require("../../assets/images/t-shirt.jpg")} width="255px" height="200px" />
                                                             <div>Latest T-Shirt</div>
                                                             <div>Rs 600</div>
                                                         </div>
                                                     </div>
                                                     <div className="col-sm-6" id="imageborder">
+                                                    <div className="imagebody">
                                                         <img src={require("../../assets/images/t-shirt.jpg")} width="255px" height="200px" />
-                                                        <div className="border">
                                                             <div>Latest T-Shirt</div>
                                                             <div>Rs 600</div>
                                                         </div>
                                                     </div>
                                                     <div className="col-sm-6" id="imageborder">
+                                                    <div className="imagebody">
                                                         <img src={require("../../assets/images/t-shirt.jpg")} width="255px" height="200px" />
-                                                        <div className="border">
-                                                            <div>Latest T-Shirt</div>
-                                                            <div>Rs 600</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-sm-6" id="imageborder">
-                                                        <img src={require("../../assets/images/t-shirt.jpg")} width="255px" height="200px" />
-                                                        <div className="border">
                                                             <div>Latest T-Shirt</div>
                                                             <div>Rs 600</div>
                                                         </div>
