@@ -1,0 +1,12 @@
+#checkout{
+    margin-top: -17px;
+    border-right: 1px solid rgb(218, 211, 211);
+}
+#card{
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(218, 211, 211);;
+}
+.button{
+    width: 100%;
+}

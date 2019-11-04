@@ -5,6 +5,10 @@ import './index.css';
 // import App from './App';
 import Home from './Component/Home/Home';
 import ExploreCategories from './Component/ExploreCategories/ExploreCategories';
+import productDetails from './Component/productDetails/productDetails';
+import checkout from './Component/checkout/checkout';
+import Address from './Component/address/address';
+import Payment from './Component/payment/payment';
 import * as serviceWorker from './serviceWorker';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,6 +24,10 @@ const routing = (
     <div>
       <Route exact  path="/" component={Home} />
       <Route path="/explore" component={ExploreCategories} />
+      <Route path="/product" component={productDetails}></Route>
+      <Route path="/checkout" component={checkout}></Route>
+      <Route path="/address" component={Address}></Route>
+      <Route path="/payment" component={Payment}></Route>
     </div>
   </BrowserRouter>
 )

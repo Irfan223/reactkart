@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import product from '../productDetails/productDetails';
+import { Link } from 'react-router-dom';
 import './ExploreCategories.css';
 const options = [
     { value: "chocolate", label: 'Chocolate' },
@@ -102,7 +104,9 @@ class ExploreCategories extends Component {
                                 <div className="row" id="mainbody">
                                     <div className="col-sm-4">
                                         <div id="imagebackground">
+                                            <Link to="/product">
                                             <img src={require("../../assets/images/t-shirt.jpg")} width="310" /><br /><br />
+                                            </Link>
                                             <h6 className="card-title"><strong>MONEY BACK GURANTEE</strong></h6>
                                             <p className="card-text">Shall open divide a one.</p>
                                         </div>

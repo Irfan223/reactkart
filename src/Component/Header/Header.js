@@ -54,7 +54,9 @@ export default class Header extends Component {
 
                             <div className="navbar-nav">
                                 <ModalLoginRegister />
+                                <Link to="checkout/cart">
                                 <div className="cart"><i className="fa fa-shopping-cart fa_custom fa-2x"></i></div>
+                                </Link>
                             </div>
                         </div>
                     </nav>
